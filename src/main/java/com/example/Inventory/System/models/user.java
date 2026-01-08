@@ -2,9 +2,9 @@ package com.example.Inventory.System.models;
 
 import com.example.Inventory.System.enums.UserRole;
 import jakarta.persistence.*;
-import jakarta.transaction.Transaction;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
+import org.hibernate.Transaction;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -54,7 +54,6 @@ public class user {
                 ", password='" + password + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", role=" + role +
-                ", transactions=" + transactions +
                 ", createdAt=" + createdAt +
                 '}';
     }
