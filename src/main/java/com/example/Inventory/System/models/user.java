@@ -1,5 +1,6 @@
 package com.example.Inventory.System.models;
 
+import com.example.Inventory.System.enums.UserRole;
 import jakarta.persistence.*;
 import jakarta.transaction.Transaction;
 import jakarta.validation.constraints.NotBlank;
@@ -41,6 +42,20 @@ public class user {
     @OneToMany(mappedBy = "user")
     private List<Transaction> transactions;
 
+    @Column(name = "create_at")
     private final LocalDateTime createdAt = LocalDateTime.now();
 
+    @Override
+    public String toString() {
+        return "user{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", role=" + role +
+                ", transactions=" + transactions +
+                ", createdAt=" + createdAt +
+                '}';
+    }
 }
