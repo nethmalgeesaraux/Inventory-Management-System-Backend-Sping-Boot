@@ -1,7 +1,6 @@
 package com.example.Inventory.System.models;
 
 import jakarta.persistence.*;
-import jakarta.transaction.Transaction;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
@@ -23,8 +22,8 @@ public class Category {
     @NotBlank(message = "Name is required")
     private String name;
 
-    @OneToMany(mappedBy = "category")
-    private List<Products> products;
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    private List<Product> products;
 
     @Override
     public String toString() {

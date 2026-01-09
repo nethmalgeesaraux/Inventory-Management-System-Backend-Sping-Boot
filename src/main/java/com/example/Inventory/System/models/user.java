@@ -4,7 +4,7 @@ import com.example.Inventory.System.enums.UserRole;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
-import org.hibernate.Transaction;
+
 
 import java.time.LocalDateTime;
 import java.util.List;
