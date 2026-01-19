@@ -17,7 +17,7 @@ public class JwtUtils {
 
     private final long jwtExpirationMs = 24 * 60 * 60 * 1000;
 
-    // ✅ Generate token using email / username
+    // Generate token using email / username
     public String generateToken(String email) {
         return Jwts.builder()
                 .setSubject(email)
