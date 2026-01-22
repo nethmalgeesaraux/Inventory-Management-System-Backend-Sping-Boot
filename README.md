@@ -1,4 +1,6 @@
 📦 Inventory Management System – Spring Boot
+
+
 📖 Project Overview
 
 The Inventory Management System is a Spring Boot–based backend application designed to manage products, categories, suppliers, transactions, and users efficiently.
